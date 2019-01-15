@@ -92,7 +92,7 @@ namespace JoEngineCueMaker
             string ext = Path.GetExtension(file).ToLowerInvariant();
             if (ext == ".mp3")
                 cue.AppendLine(string.Format(CultureInfo.InvariantCulture, "FILE \"{0}\" MP3", Path.GetFileName(file)));
-            else if (ext == ".wav" || ext == ".wave")
+            else if (ext == ".wav" || ext == ".wave" || ext == ".flac")
                 cue.AppendLine(string.Format(CultureInfo.InvariantCulture, "FILE \"{0}\" WAVE", Path.GetFileName(file)));
             else
                 return;
